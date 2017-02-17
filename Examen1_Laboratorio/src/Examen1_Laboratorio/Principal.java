@@ -973,6 +973,7 @@ public class Principal extends javax.swing.JFrame {
             Nombre = CBNombres.getSelectedItem().toString();
             Edad = Integer.parseInt(TFEdad.getText());
             ID = Integer.parseInt(TFID.getText());
+            TFIDBoleto.setEditable(false);
             IDBoleto = Integer.parseInt(TFIDBoleto.getText());
             Departamento = CBDepartamento.getSelectedItem().toString();
             Dinero = Integer.parseInt(TFDinero.getText());
@@ -983,7 +984,7 @@ public class Principal extends javax.swing.JFrame {
             } /* Fin else if */ else if (CBPolitico.isSelected()){
                 Ocupacion = CBPartidos.getSelectedItem().toString();
             } /* Fin else if */
-            Pos = CBNombres.getSelectedIndex() - 1;
+            Pos = CBNombres.getSelectedIndex();
             ListaPersonas.get(Pos).setNombre(Nombre);
             ListaPersonas.get(Pos).setEdad(Edad);
             ListaPersonas.get(Pos).setID(ID);
@@ -1010,11 +1011,11 @@ public class Principal extends javax.swing.JFrame {
         if (evt.getStateChange() == 2) {
             PersonaDatos Datos = (PersonaDatos)CBNombres.getSelectedItem();
             
-            TFEdad1.setText("" + Datos.getEdad());
-            TFID1.setText("" + Datos.getID());
-            TFIDBoleto1.setText("" + Datos.getIDBoleto());
+            TFEdad1.setText(String.valueOf(Datos.getEdad()));
+            TFID1.setText(String.valueOf(Datos.getID()));
+            TFIDBoleto1.setText(String.valueOf(Datos.getIDBoleto()));
             CBDepartamento1.setSelectedItem(Datos.getDepartamento());
-            TFDinero1.setText("" + Datos.getDinero());
+            TFDinero1.setText(String.valueOf(Datos.getDinero()));
             
         }
     }//GEN-LAST:event_CBNombresItemStateChanged
