@@ -77,5 +77,14 @@ public class PersonaDatos {
     public void setOcupacion(String Ocupacion) {
         this.Ocupacion = Ocupacion;
     }
+
+    /*public String toString1() {
+        return "Persona Datos: " + "Nombre: " + Nombre + ", Edad: " + Edad + ", ID: " + ID + ", IDBoleto: " + IDBoleto + ", Departamento: " + Departamento + ", Dinero: " + Dinero + ", Ocupacion: " + Ocupacion + "\n";
+    }*/
+    
+    @Override
+    public String toString() {
+        return Nombre;
+    }
     
 } // Fin class PersonaDatos
